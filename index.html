@@ -31,12 +31,23 @@
   .nav-cta:hover{background:var(--accent-bright)}
   .hero{padding:130px 0 50px;text-align:center}
   .hero .container{text-align:center}
+  .hero-top{display:grid;grid-template-columns:1.15fr 0.85fr;gap:56px;align-items:center;max-width:1080px;margin:0 auto 48px;text-align:left}
+  @media(max-width:880px){.hero-top{grid-template-columns:1fr;gap:36px;text-align:center}}
+  .hero-top .hero-copy{display:flex;flex-direction:column;align-items:flex-start}
+  @media(max-width:880px){.hero-top .hero-copy{align-items:center}}
+  .hero-portrait-wrap{position:relative}
+  .hero-portrait{width:100%;max-width:380px;aspect-ratio:2/3;object-fit:cover;border-radius:6px;border:1px solid var(--border);box-shadow:0 24px 60px rgba(26,24,25,0.18);display:block;margin:0 auto;filter:saturate(0.94) contrast(0.97)}
+  .hero-portrait-caption{margin-top:14px;text-align:center;font-size:11px;color:var(--text-muted);letter-spacing:0.16em;text-transform:uppercase;font-family:'Inter',sans-serif}
   .eyebrow{display:inline-block;padding:8px 18px;background:var(--accent-soft);border:1px solid var(--border-strong);border-radius:100px;font-size:11px;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:28px}
-  .hero h1{font-size:clamp(38px,5.5vw,68px);line-height:1.1;margin:0 auto 20px;max-width:880px;text-align:center;text-wrap:balance}
+  .hero h1{font-size:clamp(38px,5.5vw,64px);line-height:1.1;margin:0 0 20px;max-width:600px;text-wrap:balance}
+  @media(max-width:880px){.hero h1{margin:0 auto 20px;text-align:center}}
   .hero h1 em{color:var(--accent);font-style:italic;font-weight:400}
-  .hero-sub{font-size:18px;color:var(--text-secondary);max-width:680px;margin:0 auto 32px;line-height:1.65;text-align:center;text-wrap:pretty}
-  .hero-meta{text-align:center;margin:0 auto 40px;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:var(--text-muted)}
-  .hero-meta span{margin:0 14px}
+  .hero-sub{font-size:18px;color:var(--text-secondary);max-width:560px;margin:0 0 32px;line-height:1.65;text-wrap:pretty}
+  @media(max-width:880px){.hero-sub{margin:0 auto 32px;text-align:center}}
+  .hero-meta{margin:0 0 4px;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:var(--text-muted)}
+  @media(max-width:880px){.hero-meta{text-align:center;margin:0 auto 4px}}
+  .hero-meta span{margin:0 14px 0 0}
+  @media(max-width:880px){.hero-meta span{margin:0 8px}}
   .video-label{text-align:center;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
   .video-wrap{position:relative;padding-bottom:56.25%;margin:0 auto 14px;max-width:880px;border-radius:6px;overflow:hidden;border:1px solid var(--border-strong);box-shadow:0 30px 80px rgba(26,24,25,0.18);background:linear-gradient(135deg,#edece6,#f3f3f1)}
   .video-poster{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at center,rgba(211,79,43,0.16),transparent 65%),linear-gradient(135deg,#edece6 0%,#f3f3f1 50%,#e8e6df 100%)}
@@ -75,7 +86,11 @@
   .pillar .outcome{font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--accent);font-style:italic;line-height:1.4;margin-bottom:14px}
   .pillar p{color:var(--text-secondary);font-size:15px;line-height:1.7}
   .work-note{margin:48px auto 0;padding:24px 28px;max-width:780px;text-align:center;font-style:italic;color:var(--text-secondary);font-size:15px;line-height:1.7;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
-  .founder-block{display:flex;flex-direction:column;gap:36px;max-width:880px;margin:0 auto;align-items:center}
+  .founder-block{display:grid;grid-template-columns:0.7fr 1.3fr;gap:48px;max-width:1000px;margin:0 auto;align-items:flex-start}
+  @media(max-width:760px){.founder-block{grid-template-columns:1fr;gap:32px}}
+  .founder-img-wrap{position:relative}
+  .founder-img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:6px;border:1px solid var(--border);box-shadow:0 20px 50px rgba(26,24,25,0.14);display:block;filter:saturate(0.94) contrast(0.97)}
+  .founder-img-caption{margin-top:12px;font-size:11px;color:var(--text-muted);letter-spacing:0.14em;text-transform:uppercase;text-align:center}
   .founder-text{width:100%;text-align:left}
   .founder-text .name-loc{font-size:13px;color:var(--accent);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:14px}
   .founder-text h3{font-size:32px;margin-bottom:18px}
@@ -121,10 +136,18 @@
 
 <section class="hero">
 <div class="container">
+<div class="hero-top">
+<div class="hero-copy">
 <div class="eyebrow">The Big Three Mastery Workshop · On-Demand Replay</div>
 <h1>Career, love, confidence in 90 days. <em>The framework, recorded.</em></h1>
 <p class="hero-sub">If you've been working on yourself for a while and the outer change still hasn't shown up, the order is off. Career, love, and confidence are one arc, not three problems. The Big Three Mastery Workshop walks the order. Watch the recorded session below.</p>
-<p class="hero-meta"><span>On-Demand</span>·<span>Free Access</span>·<span>5-Day Application Window</span></p>
+<p class="hero-meta"><span>On-Demand</span><span>Free Access</span><span>5-Day Application Window</span></p>
+</div>
+<div class="hero-portrait-wrap">
+<img src="proof/jason-portrait-02.jpg" alt="Jason Crouse, founder of Saints of Flow and creator of The Flow Code" class="hero-portrait">
+<p class="hero-portrait-caption">Jason Crouse · Founder, Saints of Flow</p>
+</div>
+</div>
 <div class="video-label">Workshop Preview · ~4 Minutes</div>
 <div class="video-wrap" id="hero-video" role="button" tabindex="0" aria-label="Play workshop preview">
 <div class="video-poster">
@@ -206,6 +229,10 @@
 <div class="section-eyebrow">About Jason</div>
 <h2 class="section-title">15 years of the work. <em>Now: the methodology, recorded.</em></h2>
 <div class="founder-block">
+<div class="founder-img-wrap">
+<img src="proof/jason-portrait-01.png" alt="Jason Crouse, founder of Saints of Flow and creator of The Flow Code" class="founder-img">
+<p class="founder-img-caption">Jason Crouse · Founder, Saints of Flow</p>
+</div>
 <div class="founder-text">
 <div class="name-loc">Jason Crouse · Founder, Saints of Flow</div>
 <h3>About Jason</h3>
